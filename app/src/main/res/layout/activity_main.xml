@@ -4,15 +4,167 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Affordable Housing"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/searchAttributeEditText"
+        app:layout_constraintEnd_toEndOf="@+id/searchAttributeEditText"
+        app:layout_constraintStart_toStartOf="@+id/searchAttributeEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/searchAttributeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Search Filter"
+        app:layout_constraintBottom_toTopOf="@+id/zipCodeTextView"
+        app:layout_constraintEnd_toStartOf="@+id/searchFilterButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameTextView" />
+
+    <TextView
+        android:id="@+id/zipCodeTextView"
+        android:layout_width="95dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="8dp"
+        android:text="Zip Code"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/zipCodeEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchAttributeEditText" />
+
+    <TextView
+        android:id="@+id/cityTextView"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:text="City"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/cityEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/stateTextView"
+        app:layout_constraintTop_toBottomOf="@+id/inspNumEditText" />
+
+    <TextView
+        android:id="@+id/stateTextView"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginStart="66dp"
+        android:text="State"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cityTextView"
+        app:layout_constraintEnd_toStartOf="@+id/cityTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cityTextView" />
+
+    <TextView
+        android:id="@+id/inspNumTextView"
+        android:layout_width="142dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="9dp"
+        android:text="Inspection No."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/inspNumEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zipCodeEditText" />
+
+    <EditText
+        android:id="@+id/cityEditText"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="143dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="City"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/stateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/cityTextView" />
+
+    <EditText
+        android:id="@+id/stateEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="State"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/cityEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stateTextView" />
+
+    <EditText
+        android:id="@+id/zipCodeEditText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Zip Code"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/inspNumTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zipCodeTextView" />
+
+    <EditText
+        android:id="@+id/inspNumEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Inspection No."
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/cityTextView"
+        app:layout_constraintStart_toStartOf="@+id/stateTextView"
+        app:layout_constraintTop_toBottomOf="@+id/inspNumTextView" />
+
+    <Button
+        android:id="@+id/searchFilterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Search"
+        app:layout_constraintBaseline_toBaselineOf="@+id/searchAttributeEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchAttributeEditText" />
 
 </android.support.constraint.ConstraintLayout>
