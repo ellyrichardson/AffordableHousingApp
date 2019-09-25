@@ -1,15 +1,14 @@
 package com.example.kustudents.affordablehousingapp._models;
 
 public class HousingData {
-    int inspectionScore;
-    String housingCity;
-    String housingState;
-    String housingZip;
-    String housingDevelopmentName;
-    String housingLat;
-    String housingLong;
+    private int inspectionScore;
+    private String housingCity;
+    private String housingState;
+    private String housingZip;
+    private String housingDevelopmentName;
+    private String housingLat;
+    private String housingLong;
 
-    // sets values for the posts
     public HousingData(int p_inspectionScore, String p_housingCity, String p_housingState, String p_housingZip, String p_housingDevelopmentName,
                        String p_housingLat, String p_housingLong) {
         this.inspectionScore = p_inspectionScore;

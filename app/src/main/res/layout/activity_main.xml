@@ -45,13 +45,13 @@
         android:text="Zip Code"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/zipCodeEditText"
+        app:layout_constraintBottom_toTopOf="@+id/searchZipCodeEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchAttributeEditText" />
 
     <TextView
-        android:id="@+id/cityTextView"
+        android:id="@+id/4"
         android:layout_width="0dp"
         android:layout_height="26dp"
         android:layout_marginBottom="4dp"
@@ -60,10 +60,10 @@
         android:text="City"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/cityEditText"
+        app:layout_constraintBottom_toTopOf="@+id/searchCityEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/stateTextView"
-        app:layout_constraintTop_toBottomOf="@+id/inspNumEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/searchInspNumEditText" />
 
     <TextView
         android:id="@+id/stateTextView"
@@ -76,10 +76,10 @@
         android:text="State"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cityTextView"
-        app:layout_constraintEnd_toStartOf="@+id/cityTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/4"
+        app:layout_constraintEnd_toStartOf="@+id/4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cityTextView" />
+        app:layout_constraintTop_toTopOf="@+id/4" />
 
     <TextView
         android:id="@+id/inspNumTextView"
@@ -89,13 +89,13 @@
         android:text="Inspection No."
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/inspNumEditText"
+        app:layout_constraintBottom_toTopOf="@+id/searchInspNumEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zipCodeEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/searchZipCodeEditText" />
 
     <EditText
-        android:id="@+id/cityEditText"
+        android:id="@+id/searchCityEditText"
         android:layout_width="0dp"
         android:layout_height="47dp"
         android:layout_marginBottom="143dp"
@@ -107,11 +107,11 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/stateEditText"
-        app:layout_constraintTop_toBottomOf="@+id/cityTextView" />
+        app:layout_constraintStart_toEndOf="@+id/searchStateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/4" />
 
     <EditText
-        android:id="@+id/stateEditText"
+        android:id="@+id/searchStateEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
@@ -123,12 +123,12 @@
         android:inputType="textPersonName"
         android:text="State"
         android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/cityEditText"
+        app:layout_constraintEnd_toStartOf="@+id/searchCityEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stateTextView" />
 
     <EditText
-        android:id="@+id/zipCodeEditText"
+        android:id="@+id/searchZipCodeEditText"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -142,7 +142,7 @@
         app:layout_constraintTop_toBottomOf="@+id/zipCodeTextView" />
 
     <EditText
-        android:id="@+id/inspNumEditText"
+        android:id="@+id/searchInspNumEditText"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
         android:layout_marginBottom="7dp"
@@ -152,7 +152,7 @@
         android:inputType="textPersonName"
         android:text="Inspection No."
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/cityTextView"
+        app:layout_constraintBottom_toTopOf="@+id/4"
         app:layout_constraintStart_toStartOf="@+id/stateTextView"
         app:layout_constraintTop_toBottomOf="@+id/inspNumTextView" />
 

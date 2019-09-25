@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="85dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/resultsDevNameTextView"
+        android:layout_width="214dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="17dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:text="Development Name" />
+
+    <TextView
+        android:id="@+id/resultsCityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/resultsDevNameTextView"
+        android:layout_marginBottom="15dp"
+        android:text="City" />
+
+    <TextView
+        android:id="@+id/resultsStateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/resultsCityTextView"
+        android:layout_centerHorizontal="true"
+        android:text="State" />
+
+    <TextView
+        android:id="@+id/resultsCountyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/resultsCityTextView"
+        android:layout_marginEnd="32dp"
+        android:text="County" />
+
+    <TextView
+        android:id="@+id/resultsInspScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/resultsCountyTextView"
+        android:layout_alignTop="@+id/resultsDevNameTextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:text="50" />
+</RelativeLayout>

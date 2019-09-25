@@ -4,16 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import com.example.kustudents.affordablehousingapp.R;
 import com.example.kustudents.affordablehousingapp._models.HousingData;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -28,7 +24,8 @@ import java.util.List;
 public class SearchFilterTransport extends AsyncTask<String, String, String> {
 
     private WeakReference<Context> searchFilterInformation;
-    Activity activity;
+    private Activity activity;
+    private SearchFilterAdapter searchFilterAdapter;
 
     public SearchFilterTransport(Context context, Activity activity) {
         searchFilterInformation = new WeakReference<>(context);
@@ -80,8 +77,13 @@ public class SearchFilterTransport extends AsyncTask<String, String, String> {
         // Expecting a stringed JSON from the REST API
         Log.e("TAG", result);
 
+        // retrieves the context passed
+        Context context = searchFilterInformation.get();
+
         try {
-            parseJSONFromAPI(result);
+            if (context != null) {
+                parseJSONFromAPI(result);
+            }
         } catch (JSONException e) {
             Log.d("Json","Exception = "+e.toString());
         }
@@ -90,6 +92,9 @@ public class SearchFilterTransport extends AsyncTask<String, String, String> {
     public void parseJSONFromAPI(String json) throws JSONException {
         // List for the HousingData objects
         List<HousingData> housingDataList = new ArrayList<>();
+
+        // Adapter to output the housingDataList to the results page
+        searchFilterAdapter = new SearchFilterAdapter(housingDataList);
 
         // Gets the base JSON data
         JSONObject responseJSON = new JSONObject(json);
@@ -104,5 +109,8 @@ public class SearchFilterTransport extends AsyncTask<String, String, String> {
                     jsonObject.getString("state_code"), jsonObject.getString("zip"), jsonObject.getString("development_name"),
                     jsonObject.getString("latitude"), jsonObject.getString("longitude")));
         }
+
+        // Notifies the adapter when housingDataList gets updated so that the Results recyclerview will be updated by the adapter.
+        searchFilterAdapter.notifyDataSetChanged();
     }
 }
