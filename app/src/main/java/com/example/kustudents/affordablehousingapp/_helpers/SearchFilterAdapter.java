@@ -11,7 +11,7 @@ import com.example.kustudents.affordablehousingapp._models.HousingData;
 
 import java.util.List;
 
-public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapter.CustomViewHolder>{
+public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapter.CustomViewHolder> {
     private List<HousingData> housingDataList;
 
     public class CustomViewHolder extends RecyclerView.ViewHolder {

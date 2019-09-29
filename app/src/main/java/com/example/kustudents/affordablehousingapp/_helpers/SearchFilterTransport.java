@@ -1,3 +1,4 @@
+
 package com.example.kustudents.affordablehousingapp._helpers;
 
 import android.app.Activity;
@@ -20,6 +21,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class SearchFilterTransport extends AsyncTask<String, String, String> {
 

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     EditText searchAttributeEditTxt, searchCityEditText, searchStateEditText, searchZipEditText, searchInspScoreEditText;
     SearchFilterTransport searchFilterTransport;
 
-    static String apiURL = "http://localhost:8000/api/search/?search=";
+    static String apiURL = "http://l0.0.2.2:8000/api/search/?search=kansas";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +40,19 @@ public class MainActivity extends AppCompatActivity {
                 String stateFilter = searchStateEditText.getText().toString();
                 String inspScoreFilter = searchInspScoreEditText.getText().toString();
 
+                searchFilterTransport = new SearchFilterTransport(MainActivity.this, MainActivity.this);
+
+                //searchFilterTransport.execute(apiURL + searchFilter);
+
+                searchFilterTransport.execute(apiURL);
+
+                /*
                 if (searchFilter != "") {
                     searchFilterTransport.execute(apiURL + searchFilter);
                 } else {
                     searchFilterTransport.execute(apiURL + concatenateAPIParams("", cityFilter, stateFilter, "", inspScoreFilter));
                 }
+                */
 
                 startActivity(new Intent(MainActivity.this, ResultsActivity.class));
             }
