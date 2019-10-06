@@ -4,8 +4,12 @@ package com.example.kustudents.affordablehousingapp._helpers;
 import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.example.kustudents.affordablehousingapp.R;
 import com.example.kustudents.affordablehousingapp._models.HousingData;
 
 import org.json.JSONArray;
@@ -21,6 +25,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.RecursiveAction;
 
 
 public class SearchFilterTransport extends AsyncTask<String, String, String> {
@@ -30,6 +35,8 @@ public class SearchFilterTransport extends AsyncTask<String, String, String> {
     private SearchFilterAdapter searchFilterAdapter;
 
     HttpURLConnection httpURLConnection;
+
+    private RecyclerView resultsRecyclerView;
 
     public SearchFilterTransport(Context context, Activity activity) {
         searchFilterInformation = new WeakReference<>(context);
@@ -83,13 +90,21 @@ public class SearchFilterTransport extends AsyncTask<String, String, String> {
         Context context = searchFilterInformation.get();
 
         // List for the HousingData objects
-        List<HousingData> housingDataList = new ArrayList<>();
+        ArrayList<HousingData> housingDataList = new ArrayList<>();
 
         try {
             if (context != null) {
 
                 // Adapter to output the housingDataList to the results page
                 searchFilterAdapter = new SearchFilterAdapter(housingDataList);
+
+                RecyclerView.LayoutManager rLayoutManager = new LinearLayoutManager(context.getApplicationContext());
+                resultsRecyclerView = (RecyclerView) activity.findViewById(R.id.resultsRecyclerView);
+                resultsRecyclerView.setLayoutManager(rLayoutManager);
+                resultsRecyclerView.setItemAnimator(new DefaultItemAnimator());
+                // RecyclerView uses the adapter
+                resultsRecyclerView.setAdapter(searchFilterAdapter);
+
 
                 // Gets the base JSON data
                 JSONObject responseJSON = new JSONObject(result);

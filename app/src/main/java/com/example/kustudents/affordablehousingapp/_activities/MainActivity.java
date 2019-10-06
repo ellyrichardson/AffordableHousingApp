@@ -11,7 +11,9 @@ import android.widget.EditText;
 import com.example.kustudents.affordablehousingapp.R;
 import com.example.kustudents.affordablehousingapp._helpers.SearchFilterTransport;
 
-public class MainActivity extends AppCompatActivity {
+import java.io.Serializable;
+
+public class MainActivity extends AppCompatActivity implements Serializable {
 
     Button searchFilterBtn;
     EditText searchAttributeEditTxt, searchCityEditText, searchStateEditText, searchZipEditText, searchInspScoreEditText;
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //searchFilterTransport.execute(apiURL + searchFilter);
 
-                searchFilterTransport.execute(apiURL, searchFilter);
+                //searchFilterTransport.execute(apiURL, searchFilter);
 
                 /*
                 if (searchFilter != "") {
@@ -54,7 +56,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 */
 
-                startActivity(new Intent(MainActivity.this, ResultsActivity.class));
+                // Passes the searchFilter variable to the ResultsActivity when ResultsActivity starts
+                Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
+                intent.putExtra("searchedFilter", searchFilter);
+                startActivity(intent);
             }
         });
     }

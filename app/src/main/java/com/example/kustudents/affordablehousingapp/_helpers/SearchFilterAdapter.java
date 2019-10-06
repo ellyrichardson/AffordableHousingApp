@@ -46,7 +46,7 @@ public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapt
         holder.dCity.setText(housingData.getHousingCity());
         holder.dState.setText(housingData.getHousingState());
         holder.dCounty.setText(housingData.getHousingState());
-        holder.dInspScore.setText(housingData.getInspectionScore());
+        holder.dInspScore.setText(Integer.toString(housingData.getInspectionScore()));
     }
 
     @Override
