@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="._activities.ResultInfoActivity">
+
+    <TextView
+        android:id="@+id/resInfoInspScoreTxtView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="16dp"
+        android:text="Inspection Score: "
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/resInfoHousingCityTextView"
+        app:layout_constraintEnd_toStartOf="@+id/resInfoHousingStateTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resInfoHousingStateTextView" />
+
+    <TextView
+        android:id="@+id/resInfoHousingStateTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Housing State:"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/resInfoHousingCityTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resInfoInspScoreTxtView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resInfoHousingCityTextView"
+        android:layout_width="244dp"
+        android:layout_height="0dp"
+        android:text="Housing City:"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/resInfoHousingZipTextView"
+        app:layout_constraintStart_toStartOf="@+id/resInfoInspScoreTxtView"
+        app:layout_constraintTop_toBottomOf="@+id/resInfoHousingStateTextView" />
+
+    <TextView
+        android:id="@+id/resInfoHousingZipTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginStart="16dp"
+        android:text="Housing Zip:"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/resInfoHousingDevNameTextView"
+        app:layout_constraintEnd_toEndOf="@+id/resInfoHousingCityTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resInfoHousingCityTextView" />
+
+    <TextView
+        android:id="@+id/resInfoHousingDevNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="333dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="10dp"
+        android:text="Housing Development Name:"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resInfoHousingZipTextView" />
+</android.support.constraint.ConstraintLayout>

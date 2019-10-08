@@ -24,8 +24,6 @@ import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.RecursiveAction;
 
 
 public class SearchFilterTransport extends AsyncTask<String, String, String> {
@@ -127,31 +125,4 @@ public class SearchFilterTransport extends AsyncTask<String, String, String> {
             Log.d("Json","Exception = "+e.toString());
         }
     }
-
-    /*
-    public void parseJSONFromAPI(String json) throws JSONException {
-        // List for the HousingData objects
-        List<HousingData> housingDataList = new ArrayList<>();
-
-        // Adapter to output the housingDataList to the results page
-        searchFilterAdapter = new SearchFilterAdapter(housingDataList);
-
-        // Gets the base JSON data
-        JSONObject responseJSON = new JSONObject(json);
-        // Gets the array of results from the base JSON data
-        JSONArray jsonArray = responseJSON.getJSONArray("results");
-
-        for (int i = 0; i < jsonArray.length(); i++) {
-            // Isolates JSON objects from the array based on their index
-            JSONObject jsonObject = jsonArray.getJSONObject(i);
-            // Each JSON object from the array of results will be turned into a new HousingData object
-            housingDataList.add(new HousingData(jsonObject.getInt("inspection_score"), jsonObject.getString("city"),
-                    jsonObject.getString("state_code"), jsonObject.getString("zip"), jsonObject.getString("development_name"),
-                    jsonObject.getString("latitude"), jsonObject.getString("longitude")));
-        }
-
-        // Notifies the adapter when housingDataList gets updated so that the Results recyclerview will be updated by the adapter.
-        searchFilterAdapter.notifyDataSetChanged();
-    }
-    */
 }
