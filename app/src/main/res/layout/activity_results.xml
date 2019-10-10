@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#88BDBC"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="._activities.ResultsActivity">
@@ -23,12 +24,13 @@
 
     <TextView
         android:id="@+id/resultsTitleTextView"
-        android:layout_width="189dp"
+        android:layout_width="246dp"
         android:layout_height="35dp"
         android:layout_marginBottom="18dp"
         android:layout_marginTop="16dp"
-        android:text="Housing Results"
+        android:text="HOUSING RESULTS"
         android:textAlignment="center"
+        android:textColor="#112D32"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/resultsRecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,10 +41,11 @@
         android:id="@+id/resultsDoneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
         android:text="Done"
+        android:background="@drawable/button_generic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -50,10 +53,11 @@
         android:id="@+id/resultsHeatMapButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginRight="39dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
         android:text="Heat Map"
+        android:background="@drawable/button_generic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -20,17 +20,17 @@ public class ResultInfoActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        developmentName = (TextView) findViewById(R.id.resInfoHousingDevNameTextView);
-        inspScore = (TextView) findViewById(R.id.resInfoInspScoreTxtView);
-        city = (TextView) findViewById(R.id.resInfoHousingCityTextView);
-        state = (TextView) findViewById(R.id.resInfoHousingStateTextView);
-        zip = (TextView) findViewById(R.id.resInfoHousingZipTextView);
+        developmentName = (TextView) findViewById(R.id.resInfoActHousingDevNameTextView);
+        inspScore = (TextView) findViewById(R.id.resInfoActInspScoreTxtView);
+        city = (TextView) findViewById(R.id.resInfoActHousingCityTextView);
+        state = (TextView) findViewById(R.id.resInfoActHousingStateTextView);
+        zip = (TextView) findViewById(R.id.resInfoActHousingZipTextView);
 
-        developmentName.setText("Housing Development Name: " + (String)intent.getSerializableExtra("developmentName"));
-        inspScore.setText("Inspection Score: " + (String)intent.getSerializableExtra("inspectionScore"));
-        city.setText("Housing City: " + (String)intent.getSerializableExtra("city"));
-        state.setText("Housing State: " + (String)intent.getSerializableExtra("state"));
-        zip.setText("Housing Zip: " + (String)intent.getSerializableExtra("zip"));
+        developmentName.setText((String)intent.getSerializableExtra("developmentName"));
+        inspScore.setText((String)intent.getSerializableExtra("inspectionScore"));
+        city.setText((String)intent.getSerializableExtra("city"));
+        state.setText((String)intent.getSerializableExtra("state"));
+        //zip.setText("Housing Zip: " + (String)intent.getSerializableExtra("zip"));
 
     }
 }
