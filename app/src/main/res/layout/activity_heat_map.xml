@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88BDBC"
+    tools:context="._activities.HeatMapActivity">
+
+    <fragment
+        android:id="@+id/hmHeatMapFragment"
+        android:name="com.example.kustudents.affordablehousingapp._fragments.HeatMapFragment"
+        android:layout_width="332dp"
+        android:layout_height="424dp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="58dp" />
+
+    <TextView
+        android:id="@+id/hmTitleTextView"
+        android:layout_width="173dp"
+        android:layout_height="32dp"
+        android:text="HEAT MAP"
+        android:textAlignment="center"
+        android:textColor="#112D32"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="16dp" />
+</android.support.constraint.ConstraintLayout>

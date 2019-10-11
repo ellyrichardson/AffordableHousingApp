@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name="._activities.ResultsActivity" />
-        <activity android:name="._activities.ResultInfoActivity"></activity>
+        <activity android:name="._activities.ResultInfoActivity" />
+        <activity android:name="._activities.HeatMapActivity"></activity>
     </application>
 
 </manifest>
