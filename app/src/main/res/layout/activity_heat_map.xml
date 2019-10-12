@@ -10,19 +10,31 @@
     <fragment
         android:id="@+id/hmHeatMapFragment"
         android:name="com.example.kustudents.affordablehousingapp._fragments.HeatMapFragment"
-        android:layout_width="332dp"
-        android:layout_height="424dp"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="58dp" />
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="29dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginStart="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hmTitleTextView" />
 
     <TextView
         android:id="@+id/hmTitleTextView"
         android:layout_width="173dp"
-        android:layout_height="32dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="16dp"
         android:text="HEAT MAP"
         android:textAlignment="center"
         android:textColor="#112D32"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/hmHeatMapFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
