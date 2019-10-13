@@ -8,6 +8,10 @@ import android.widget.Button;
 
 import com.example.kustudents.affordablehousingapp.R;
 import com.example.kustudents.affordablehousingapp._helpers.SearchFilterTransport;
+import com.example.kustudents.affordablehousingapp._models.HousingData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ResultsActivity extends AppCompatActivity {
 
@@ -34,6 +38,7 @@ public class ResultsActivity extends AppCompatActivity {
         heatMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ArrayList<HousingData> housingDataArrayList = new ArrayList<HousingData>();
 
                 Intent intent = new Intent(ResultsActivity.this, HeatMapActivity.class);
                 startActivity(intent);

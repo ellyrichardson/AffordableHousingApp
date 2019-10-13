@@ -53,6 +53,8 @@ public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapt
         final String housingState = housingData.getHousingState();
         final String housingCounty = housingData.getHousingState();
         final String housingInspScore = Integer.toString(housingData.getInspectionScore());
+        final String housingLat = housingData.getHousingLat();
+        final String housingLong = housingData.getHousingLong();
 
         holder.dDevelopmentName.setText(housingDevelopmentName);
         holder.dCity.setText(housingCity);
@@ -70,6 +72,8 @@ public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapt
                 intent.putExtra("state", housingState);
                 intent.putExtra("county", housingCounty);
                 intent.putExtra("inspectionScore", housingInspScore);
+                intent.putExtra("latitude", housingLat);
+                intent.putExtra("longitude", housingLong);
                 context.startActivity(intent);
             }
         });
