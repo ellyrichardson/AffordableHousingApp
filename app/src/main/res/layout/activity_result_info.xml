@@ -22,8 +22,7 @@
         app:layout_constraintBottom_toTopOf="@+id/resInfoActInspScoreTxtView"
         app:layout_constraintEnd_toStartOf="@+id/resInfoHousingStateTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/resInfoHousingStateTextView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/resInfoHousingStateTextView" />
 
     <TextView
         android:id="@+id/resInfoActInspScoreTxtView"
@@ -38,13 +37,12 @@
         app:layout_constraintBottom_toTopOf="@+id/resInfoHousingCityTextView"
         app:layout_constraintEnd_toStartOf="@+id/resInfoActHousingStateTextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resInfoHousingStateTextView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/resInfoHousingStateTextView" />
 
     <TextView
         android:id="@+id/resInfoTitleTxtView"
         android:layout_width="179dp"
-        android:layout_height="28dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="9dp"
         android:layout_marginTop="16dp"
         android:text="HOUSING INFO"
@@ -58,8 +56,8 @@
 
     <TextView
         android:id="@+id/resInfoHousingStateTextView"
-        android:layout_width="122dp"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="Housing State:"
@@ -72,8 +70,8 @@
 
     <TextView
         android:id="@+id/resInfoActHousingStateTextView"
-        android:layout_width="34dp"
-        android:layout_height="23dp"
+        android:layout_width="73dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="104dp"
         android:layout_marginRight="104dp"
         android:text="ST"
@@ -92,7 +90,6 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/resInfoActHousingCityTextView"
         app:layout_constraintEnd_toEndOf="@+id/resInfoActHousingCityTextView"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/resInfoActInspScoreTxtView"
         app:layout_constraintTop_toBottomOf="@+id/resInfoActHousingStateTextView" />
 
@@ -100,28 +97,31 @@
         android:id="@+id/resInfoActHousingCityTextView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginStart="1dp"
         android:text="City"
         android:textSize="13sp"
-        app:layout_constraintBottom_toTopOf="@+id/resInfoHousingZipTextView"
-        app:layout_constraintEnd_toEndOf="@+id/resInfoHousingDevNameTextView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/resInfoHousingZipTextView"
+        app:layout_constraintBottom_toTopOf="@+id/resInfoActHousingZipTextView"
+        app:layout_constraintEnd_toEndOf="@+id/resInfoActHousingStateTextView"
+        app:layout_constraintStart_toStartOf="@+id/resultsHeatMapFragment"
         app:layout_constraintTop_toBottomOf="@+id/resInfoHousingCityTextView" />
 
     <TextView
         android:id="@+id/resInfoHousingZipTextView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginTop="27dp"
         android:text="Housing Zip:"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/resInfoActHousingZipTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/resInfoActHousingZipTextView"
         app:layout_constraintEnd_toEndOf="@+id/resInfoActHousingZipTextView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/resInfoActHousingZipTextView"
-        app:layout_constraintTop_toBottomOf="@+id/resInfoActHousingCityTextView" />
+        app:layout_constraintStart_toStartOf="@+id/resInfoActHousingCityTextView"
+        app:layout_constraintTop_toTopOf="@+id/resInfoActHousingCityTextView" />
 
     <TextView
         android:id="@+id/resInfoActHousingZipTextView"
@@ -135,9 +135,8 @@
         android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@+id/resInfoHousingDevNameTextView"
         app:layout_constraintEnd_toEndOf="@+id/resInfoHousingDevNameTextView"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resInfoHousingZipTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/resInfoActHousingCityTextView" />
 
     <TextView
         android:id="@+id/resInfoHousingDevNameTextView"
@@ -149,7 +148,6 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/resInfoActHousingDevNameTextView"
         app:layout_constraintEnd_toEndOf="@+id/resInfoActHousingDevNameTextView"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/resInfoActHousingDevNameTextView"
         app:layout_constraintTop_toBottomOf="@+id/resInfoActHousingZipTextView" />
 
@@ -157,20 +155,27 @@
         android:id="@+id/resInfoActHousingDevNameTextView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="243dp"
+        android:layout_marginBottom="20dp"
         android:text="Name"
         android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/resultsHeatMapFragment"
         app:layout_constraintEnd_toEndOf="@+id/resInfoTitleTxtView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/resInfoActInspScoreTxtView"
+        app:layout_constraintStart_toStartOf="@+id/resInfoActHousingCityTextView"
         app:layout_constraintTop_toBottomOf="@+id/resInfoHousingDevNameTextView" />
 
     <fragment
-        android:id="@+id/fragment"
+        android:id="@+id/resultsHeatMapFragment"
         android:name="com.example.kustudents.affordablehousingapp._fragments.HeatMapFragment"
-        android:layout_width="354dp"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
         android:layout_height="206dp"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="289dp" />
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resInfoActHousingDevNameTextView" />
 </android.support.constraint.ConstraintLayout>
