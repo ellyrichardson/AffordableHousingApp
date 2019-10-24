@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88BDBC"
+    tools:context="._activities.RegisterActivity">
+
+    <EditText
+        android:id="@+id/regUsernameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Username"
+        app:layout_constraintBottom_toTopOf="@+id/regPasswordEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regTitleTextView" />
+
+    <EditText
+        android:id="@+id/regEmailEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="61dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Email"
+        app:layout_constraintBottom_toTopOf="@+id/regRegisterButton"
+        app:layout_constraintStart_toStartOf="@+id/regConfirmPasswordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/regConfirmPasswordEditText" />
+
+    <EditText
+        android:id="@+id/regPasswordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Password"
+        app:layout_constraintBottom_toTopOf="@+id/regConfirmPasswordEditText"
+        app:layout_constraintStart_toStartOf="@+id/regUsernameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/regUsernameEditText" />
+
+    <EditText
+        android:id="@+id/regConfirmPasswordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/edittext_bg"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Confirm Password"
+        app:layout_constraintBottom_toTopOf="@+id/regEmailEditText"
+        app:layout_constraintStart_toStartOf="@+id/regPasswordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/regPasswordEditText" />
+
+    <TextView
+        android:id="@+id/regTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="30dp"
+        android:text="CREATE ACCOUNT"
+        android:textAlignment="center"
+        android:textColor="#112D32"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/regUsernameEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/regRegisterButton"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button_generic"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regEmailEditText" />
+</android.support.constraint.ConstraintLayout>

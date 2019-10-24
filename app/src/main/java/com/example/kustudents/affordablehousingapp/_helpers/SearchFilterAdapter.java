@@ -2,6 +2,7 @@ package com.example.kustudents.affordablehousingapp._helpers;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,7 +47,8 @@ public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapt
 
     @Override
     public void onBindViewHolder(CustomViewHolder holder, int position) {
-        HousingData housingData = housingDataList.get(position);
+        //final List<HousingData> housingDataToBePassed = new List<HousingData>();
+        HousingData housingData = getHousingDataList().get(position);
 
         final String housingDevelopmentName = housingData.getHousingDevelopmentName();
         final String housingCity = housingData.getHousingCity();
@@ -55,6 +57,7 @@ public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapt
         final String housingInspScore = Integer.toString(housingData.getInspectionScore());
         final String housingLat = housingData.getHousingLat();
         final String housingLong = housingData.getHousingLong();
+        final HousingData housingDataToBePassed = housingData;
 
         holder.dDevelopmentName.setText(housingDevelopmentName);
         holder.dCity.setText(housingCity);
@@ -65,6 +68,7 @@ public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapt
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
                 Context context = v.getContext();
                 Intent intent = new Intent(context, ResultInfoActivity.class);
                 intent.putExtra("developmentName", housingDevelopmentName);
@@ -74,6 +78,10 @@ public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapt
                 intent.putExtra("inspectionScore", housingInspScore);
                 intent.putExtra("latitude", housingLat);
                 intent.putExtra("longitude", housingLong);
+                intent.putExtra("housingList", housingDataToBePassed);
+
+                bundle.putParcelable("data", housingDataToBePassed);
+                intent.putExtras(bundle);
                 context.startActivity(intent);
             }
         });
@@ -82,5 +90,9 @@ public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapt
     @Override
     public int getItemCount() {
         return housingDataList.size();
+    }
+
+    private List<HousingData> getHousingDataList() {
+        return housingDataList;
     }
 }

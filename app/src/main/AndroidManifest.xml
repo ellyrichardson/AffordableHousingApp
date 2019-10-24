@@ -12,11 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBi6RDv-AKbxLgPDwktkHexNt3DDiKrqcQ" />
@@ -30,7 +28,9 @@
         </activity>
         <activity android:name="._activities.ResultsActivity" />
         <activity android:name="._activities.ResultInfoActivity" />
-        <activity android:name="._activities.HeatMapActivity"></activity>
+        <activity android:name="._activities.HeatMapActivity" />
+        <activity android:name="._activities.LoginRegisterActivity" />
+        <activity android:name="._activities.RegisterActivity"></activity>
     </application>
 
 </manifest>

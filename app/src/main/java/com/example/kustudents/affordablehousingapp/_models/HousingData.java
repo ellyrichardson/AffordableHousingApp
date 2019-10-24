@@ -1,6 +1,11 @@
 package com.example.kustudents.affordablehousingapp._models;
 
-public class HousingData {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import com.google.android.gms.cast.framework.media.RemoteMediaClient;
+
+public class HousingData implements Parcelable{
     private int inspectionScore;
     private String housingCity;
     private String housingState;
@@ -47,4 +52,45 @@ public class HousingData {
     public String getHousingLong() {
         return this.housingLong;
     }
+
+    @Override
+    public int describeContents() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest,int arg1) {
+        // TODO Auto-generated method stub
+        dest.writeInt(inspectionScore);
+        dest.writeString(housingCity);
+        dest.writeString(housingState);
+        dest.writeString(housingZip);
+        dest.writeString(housingDevelopmentName);
+        dest.writeString(housingLat);
+        dest.writeString(housingLong);
+    }
+
+    public HousingData(Parcel in) {
+        inspectionScore = 0;
+        housingCity = "";
+        housingState = "";
+        housingZip = "";
+        housingDevelopmentName = "";
+        housingLat = "";
+        housingLong = "";
+    }
+
+    public static final Parcelable.Creator<HousingData> CREATOR = new Parcelable.Creator<HousingData>()
+    {
+        public HousingData createFromParcel(Parcel in)
+        {
+            return new HousingData(in);
+        }
+
+        @Override
+        public HousingData[] newArray(int size) {
+            return new HousingData[size];
+        }
+    };
 }
