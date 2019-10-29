@@ -80,7 +80,7 @@ public class SearchFilterAdapter extends  RecyclerView.Adapter<SearchFilterAdapt
                 intent.putExtra("longitude", housingLong);
                 intent.putExtra("housingList", housingDataToBePassed);
 
-                bundle.putParcelable("data", housingDataToBePassed);
+                //bundle.putParcelable("data", housingDataToBePassed);
                 intent.putExtras(bundle);
                 context.startActivity(intent);
             }
