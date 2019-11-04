@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.example.kustudents.affordablehousingapp.R;
+import com.example.kustudents.affordablehousingapp._interfaces.SFTAsyncResponse;
 import com.example.kustudents.affordablehousingapp._models.HousingData;
 
 import org.json.JSONArray;
@@ -32,13 +33,16 @@ public class SearchFilterTransport extends AsyncTask<String, String, String> {
     private Activity activity;
     private SearchFilterAdapter searchFilterAdapter;
 
+    private SFTAsyncResponse sftAsyncResponseDelegate = null;
+
     HttpURLConnection httpURLConnection;
 
     private RecyclerView resultsRecyclerView;
 
-    public SearchFilterTransport(Context context, Activity activity) {
+    public SearchFilterTransport(Context context, Activity activity, SFTAsyncResponse sftAsyncResponseDelegate) {
         searchFilterInformation = new WeakReference<>(context);
         this.activity = activity;
+        this.sftAsyncResponseDelegate = sftAsyncResponseDelegate;
     }
 
     @Override
@@ -120,6 +124,8 @@ public class SearchFilterTransport extends AsyncTask<String, String, String> {
 
                 // Notifies the adapter when housingDataList gets updated so that the Results recyclerview will be updated by the adapter.
                 searchFilterAdapter.notifyDataSetChanged();
+
+                sftAsyncResponseDelegate.returnProcessedList(housingDataList);
             }
         } catch (JSONException e) {
             Log.d("Json","Exception = "+e.toString());

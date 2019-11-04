@@ -10,10 +10,13 @@ import android.widget.EditText;
 
 import com.example.kustudents.affordablehousingapp.R;
 import com.example.kustudents.affordablehousingapp._helpers.SearchFilterTransport;
+import com.example.kustudents.affordablehousingapp._interfaces.SFTAsyncResponse;
+import com.example.kustudents.affordablehousingapp._models.HousingData;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements Serializable {
+public class MainActivity extends AppCompatActivity implements Serializable, SFTAsyncResponse {
 
     Button searchFilterBtn;
     EditText searchAttributeEditTxt, searchCityEditText, searchStateEditText, searchZipEditText, searchInspScoreEditText;
@@ -33,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
         searchStateEditText = (EditText) findViewById(R.id.searchStateEditText);
         searchInspScoreEditText = (EditText) findViewById(R.id.searchInspNumEditText);
 
-        searchFilterTransport = new SearchFilterTransport(this, this);
+        searchFilterTransport = new SearchFilterTransport(this, this, this);
 
         searchFilterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,5 +69,10 @@ public class MainActivity extends AppCompatActivity implements Serializable {
 
     private String concatenateAPIParams(String devName, String city, String state, String county, String inspScore) {
         return devName + "," + city + "," + state + "," + county + "," + inspScore;
+    }
+
+    @Override
+    public void returnProcessedList(ArrayList<HousingData> processedList) {
+
     }
 }
