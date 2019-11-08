@@ -41,10 +41,10 @@ public class ResultsActivity extends AppCompatActivity implements SFTAsyncRespon
         heatMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //ArrayList<HousingData> housingDataArrayList = new ArrayList<HousingData>();
 
                 Intent intent = new Intent(ResultsActivity.this, HeatMapActivity.class);
-                intent.putParcelableArrayListExtra("housingDataList", housingDataArrayList);
+                // Passes the housing data arrayList to the HeatMap Activity
+                intent.putExtra("housingDataList", housingDataArrayList);
                 startActivity(intent);
             }
         });

@@ -47,18 +47,6 @@ public class MainActivity extends AppCompatActivity implements Serializable, SFT
                 String stateFilter = searchStateEditText.getText().toString();
                 String inspScoreFilter = searchInspScoreEditText.getText().toString();
 
-                //searchFilterTransport.execute(apiURL + searchFilter);
-
-                //searchFilterTransport.execute(apiURL, searchFilter);
-
-                /*
-                if (searchFilter != "") {
-                    searchFilterTransport.execute(apiURL + searchFilter);
-                } else {
-                    searchFilterTransport.execute(apiURL + concatenateAPIParams("", cityFilter, stateFilter, "", inspScoreFilter));
-                }
-                */
-
                 // Passes the searchFilter variable to the ResultsActivity when ResultsActivity starts
                 Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
                 intent.putExtra("searchedFilter", searchFilter);

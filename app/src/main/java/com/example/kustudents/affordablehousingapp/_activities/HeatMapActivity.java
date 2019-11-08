@@ -20,10 +20,15 @@ import java.util.ArrayList;
 
 public class HeatMapActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    ArrayList<HousingData> housingDataArrayList = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_heat_map);
+
+        // Gets the passed housing Data List from the Results Activity
+        housingDataArrayList = (ArrayList<HousingData>) getIntent().getSerializableExtra("housingDataList");
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.hmHeatMapFragment);
         mapFragment.getMapAsync(this);
@@ -32,21 +37,11 @@ public class HeatMapActivity extends FragmentActivity implements OnMapReadyCallb
     @Override
     public void onMapReady(GoogleMap googleMap) {
         // This void function has to be overriden under OnMapReadyCallBack so that getMapAsync() can work in this activity.
-
-        Intent intent = getIntent();
-        final ArrayList<HousingData> housingDataArrayList = intent.getParcelableArrayListExtra("housingDataList");
-
         for (HousingData value : housingDataArrayList) {
             LatLng housingLocation = new LatLng(Float.parseFloat(value.getHousingLat()), Float.parseFloat(value.getHousingLong()));
             googleMap.addMarker(new MarkerOptions().position(housingLocation)
                     .title(value.getHousingDevelopmentName()));
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(housingLocation));
         }
-        /*
-        LatLng sydney = new LatLng(-33.852, 151.211);
-        googleMap.addMarker(new MarkerOptions().position(sydney)
-            .title("Marker in Sydney"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-        */
     }
 }
