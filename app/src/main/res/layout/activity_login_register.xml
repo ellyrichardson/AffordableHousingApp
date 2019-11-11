@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#88BDBC"
-    tools:context="._activities.LoginRegisterActivity">
+    tools:context="._activities.LoginRegisterActivity"
+    tools:layout_editor_absoluteY="25dp">
 
 
     <TextView
@@ -31,35 +32,35 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="14dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Username"
         app:layout_constraintBottom_toTopOf="@+id/logRegPasswdEditText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/logRegPasswdEditText"
         app:layout_constraintTop_toBottomOf="@+id/loginRegTitleTextView" />
 
     <EditText
         android:id="@+id/logRegPasswdEditText"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="32dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginStart="1dp"
+        android:layout_marginBottom="14dp"
         android:background="@drawable/edittext_bg"
         android:ems="10"
         android:inputType="textPassword|numberPassword"
         android:text="Password"
-        app:layout_constraintBottom_toTopOf="@+id/logRegOrTextView"
-        app:layout_constraintStart_toStartOf="@+id/logRegUsernameEditText"
+        app:layout_constraintBottom_toTopOf="@+id/logRegLoginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logRegUsernameEditText" />
 
     <TextView
         android:id="@+id/logRegOrTextView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="26dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="67dp"
         android:layout_marginLeft="67dp"
         android:layout_marginRight="67dp"
@@ -70,12 +71,12 @@
         app:layout_constraintBottom_toTopOf="@+id/logRegRegisterButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logRegPasswdEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/logRegLoginButton" />
 
     <Button
         android:id="@+id/logRegRegisterButton"
         android:layout_width="144dp"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="101dp"
         android:background="@drawable/button_generic"
         android:text="Create Account"
@@ -83,4 +84,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logRegOrTextView" />
+
+    <Button
+        android:id="@+id/logRegLoginButton"
+        android:layout_width="144dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_generic"
+        android:text="Login"
+        app:layout_constraintBottom_toTopOf="@+id/logRegOrTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logRegPasswdEditText" />
 </android.support.constraint.ConstraintLayout>

@@ -19,7 +19,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBi6RDv-AKbxLgPDwktkHexNt3DDiKrqcQ" />
 
-        <activity android:name="._activities.MainActivity">
+        <activity android:name="._activities.LoginRegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +29,7 @@
         <activity android:name="._activities.ResultsActivity" />
         <activity android:name="._activities.ResultInfoActivity" />
         <activity android:name="._activities.HeatMapActivity" />
-        <activity android:name="._activities.LoginRegisterActivity" />
+        <activity android:name="._activities.MainActivity" />
         <activity android:name="._activities.RegisterActivity"></activity>
     </application>
 
